@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_employee_form_inherit_employee_number" model="ir.ui.view">
+        <field name="name">hr.employee.form.employee.number</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Show Employee Number below Employee Name -->
+            <xpath expr="//field[@name='job_id']" position="before">
+          
+                
+                    <field name="employee_number"
+                           class="text-muted" string="Employee Number"
+                           placeholder="Employee Number" readonly="0"/>
+             
+         
+            </xpath>
+
+            <!-- Generate Button -->
+            <xpath expr="//header" position="inside">
+                <button
+                    name="action_generate_employee_number"
+                    type="object"
+                    string="Generate Employee Number"
+                    class="btn-primary"
+                    invisible="employee_number != False"
+                />
+            </xpath>
+
+        </field>
+    </record>
+     <!-- Search View -->
+    <record id="view_employee_filter_inherit_employee_number" model="ir.ui.view">
+        <field name="name">hr.employee.search.employee.number</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="employee_number"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
