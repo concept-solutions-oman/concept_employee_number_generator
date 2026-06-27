@@ -6,7 +6,7 @@
         Assign sequential employee numbers automatically in Odoo HR, with bulk generation support in list view.
     """,
     'category': 'Human Resources',
-    'author': 'Concept Solutions',
+    'author': 'Concept Solutions LLC',
     'website': 'https://www.csloman.com',
     'license': 'LGPL-3',
     'depends': ['hr'],
