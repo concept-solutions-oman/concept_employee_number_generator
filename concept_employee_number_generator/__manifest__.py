@@ -18,7 +18,7 @@
     'images': [
         'static/description/banner.png',
         'static/description/Screenshot1.png',
-        'static/description/Screenshot2.png',
+        'static/description/Screenshot2.jpeg',
         'static/description/Screenshot3.png',
     ],
     'installable': True,
